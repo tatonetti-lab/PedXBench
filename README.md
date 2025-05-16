@@ -43,12 +43,12 @@ This creates the exact directory layout expected by train_bigbird.py.
 
 ## Quick-start: reproduce the BigBird baseline
 
-# 1. Create a clean environment
+### 1. Create a clean environment
 conda create -n pedx-bench python=3.10 -y
 conda activate pedx-bench
 pip install -r requirements.txt          # transformers[torch], datasets, accelerate, evaluate, scikit-learn, sentencepiece
 
-# 2. Train for a single epoch (≈20 min on 1 × A100; CPU works but is slower)
+### 2. Train for four epochs (≈20 min on 1 × A100; CPU works but is slower)
 ```
 python scripts/train_bigbird.py \
        --split_dir data/processed/splits \
