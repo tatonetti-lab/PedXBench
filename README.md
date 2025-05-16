@@ -65,9 +65,10 @@ checkpoints/bigbird_demo/
 
 ## Evaluate the saved model
 
+```
 python scripts/eval_bigbird.py \
        --model_dir checkpoints/bigbird_demo \
        --split_csv data/processed/splits/test.csv \
        --txt_dir   data/raw/txt
-
+```
       
