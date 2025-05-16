@@ -33,9 +33,11 @@ PY
 
 🔻 Optional: download the raw .txt FDA labels locally
 
+```
 python scripts/download_txt.py \
         --hf-dataset apoorvasrinivasan/Ped-X-Bench \
         --dst data/raw/txt
+```
 
 This creates the exact directory layout expected by train_bigbird.py.
 
@@ -47,12 +49,13 @@ conda activate pedx-bench
 pip install -r requirements.txt          # transformers[torch], datasets, accelerate, evaluate, scikit-learn, sentencepiece
 
 # 2. Train for a single epoch (≈20 min on 1 × A100; CPU works but is slower)
+```
 python scripts/train_bigbird.py \
        --split_dir data/processed/splits \
        --txt_dir   data/raw/txt \
        --out_dir   checkpoints/bigbird_demo \
        --epochs    4
-
+```
 The script prints dev metrics every 100 steps and writes:
 checkpoints/bigbird_demo/
   ├── config.json
